@@ -4,7 +4,6 @@ global with sharing class CreateOpportunity
     @HttpPost
     global static void doPost( ) 
     {
-        //ResponseBase customeResponse = new ResponseBase();
         RestRequest req = RestContext.request;
 
         RestResponse standardResp = RestContext.response;
@@ -17,8 +16,7 @@ global with sharing class CreateOpportunity
         } catch (Exception ex) {
             return ;
         }
-        //String validationMessage = validateRequest(reqBodyObj);
-        System.debug('--------------->'+reqBodyObj);
+        System.debug('--------Test------->'+reqBodyObj);
         
         List<Account> lstAccount;
         if(reqBodyObj.customerName != null){
